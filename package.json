@@ -1,23 +1,25 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
+  "name": "@keez/calo",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject"
+    "start": "npm run start:dev",
+    "start:dev": "env-cmd -f .dev.env parcel index.html --no-cache",
+    "start:uat": "env-cmd -f .uat.env parcel index.html --no-cache",
+    "start:prd": "env-cmd -f .prd.env parcel index.html --no-cache"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "parcel-bundler": "^1.12.4",
+    "tailwindcss": "^1.6.2"
   },
   "dependencies": {
-    "expo": "~41.0.1",
-    "expo-status-bar": "~1.0.4",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
-    "react-native-web": "~0.13.12",
-    "tailwind-rn": "^3.0.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.9.0"
-  },
-  "private": true
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
+  }
 }
