@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run start:dev",
+    "build": "parcel build index.html --public-url / --no-cache",
     "start:dev": "env-cmd -f .dev.env parcel index.html --no-cache",
     "start:uat": "env-cmd -f .uat.env parcel index.html --no-cache",
     "start:prd": "env-cmd -f .prd.env parcel index.html --no-cache"
